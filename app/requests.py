@@ -32,46 +32,46 @@ def get_sources(category):
             sources_results = process_sources(sources_results_list)
     return sources_results
 
-# def process_sources(sources_list):
-#     '''
-#     function that processes the news results and transform them to a list of objects
-#     Args:
-#         sources_list: A list of dictionaries that contain news details
-#     Returns:
-#         sources_results: Alist of news source objects
-#     '''
-#     sources_results = []
-#     for sources_item in sources_list:
-#         id = sources_item.get('id')
-#         name = sources_item.get('name')
-#         description = sources_item.get('description')
-#         url = sources_item.get('url')
-#         category = sources_item.get('category')
-#         language = sources_item.get('language')
-#         country = sources_item.get('country')
+def process_sources(sources_list):
+    '''
+    function that processes the news results and transform them to a list of objects
+    Args:
+        sources_list: A list of dictionaries that contain news details
+    Returns:
+        sources_results: Alist of news source objects
+    '''
+    sources_results = []
+    for sources_item in sources_list:
+        id = sources_item.get('id')
+        name = sources_item.get('name')
+        description = sources_item.get('description')
+        url = sources_item.get('url')
+        category = sources_item.get('category')
+        language = sources_item.get('language')
+        country = sources_item.get('country')
 
-#         if id:
-#             sources_object = Source(id,name,description,url,category,language,country)
+        if id:
+            sources_object = Source(id,name,description,url,category,language,country)
 
-#             sources_results.append(sources_object)
-#     return sources_results
+            sources_results.append(sources_object)
+    return sources_results
 
-# def get_articles(id):
-#     '''
-#     Function that gets the json response to url request
-#     '''
-#     get_article_news_url = article_url.format(id,api_key)
-#     with urllib.request.urlopen(get_article_news_url) as url:
-#         get_articles_data = url.read()
-#         get_articles_response = json.loads(get_articles_data)
+def get_articles(id):
+    '''
+    Function that gets the json response to url request
+    '''
+    get_article_news_url = article_url.format(id,api_key)
+    with urllib.request.urlopen(get_article_news_url) as url:
+        get_articles_data = url.read()
+        get_articles_response = json.loads(get_articles_data)
 
-#         article_results = None
+        article_results = None
 
-#         if get_articles_response['articles']:
-#             article_results_list = get_articles_response['articles']
-#             article_results = process_articles(article_results_list)
+        if get_articles_response['articles']:
+            article_results_list = get_articles_response['articles']
+            article_results = process_articles(article_results_list)
 
-#     return article_results
+    return article_results
 
 # def process_articles(articles_list):
 #     '''
