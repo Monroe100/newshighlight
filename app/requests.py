@@ -51,7 +51,7 @@ def process_sources(sources_list):
         country = sources_item.get('country')
 
         if id:
-            sources_object = Source(id,name,description,url,category,language,country)
+            sources_object = newssource(id,name,description,url,category,language,country)
 
             sources_results.append(sources_object)
     return sources_results
@@ -73,29 +73,29 @@ def get_articles(id):
 
     return article_results
 
-# def process_articles(articles_list):
-#     '''
-#     process the dictionary and output a list of objects
-#     '''
-#     article_results = []
-#     source_dictionary = {}
-#     for result in articles_list:
-#         source_id = result ['source']
-#         source_dictionary['id'] = source_id['id']
-#         source_dictionary['name'] = source_id['name']
-#         id = source_dictionary['id']
-#         name = source_dictionary['name']
+def process_articles(articles_list):
+    '''
+    process the dictionary and output a list of objects
+    '''
+    article_results = []
+    source_dictionary = {}
+    for result in articles_list:
+        source_id = result ['source']
+        source_dictionary['id'] = source_id['id']
+        source_dictionary['name'] = source_id['name']
+        id = source_dictionary['id']
+        name = source_dictionary['name']
 
-#         author = result.get('author')
-#         title = result.get('title')
-#         description = result.get('description')
-#         url = result.get('url')
-#         urlToImage = result.get('urlToImage')
+        author = result.get('author')
+        title = result.get('title')
+        description = result.get('description')
+        url = result.get('url')
+        urlToImage = result.get('urlToImage')
         
-#         if urlToImage:
-#             print (id)
-#             article_object = Article(id,name,author,title,description,url,urlToImage)
+        if urlToImage:
+            print (id)
+            article_object = newsarticle(id,name,author,title,description,url,urlToImage)
 
-#             article_results.append(article_object)
+            article_results.append(article_object)
 
-#     return article_results
+    return article_results
