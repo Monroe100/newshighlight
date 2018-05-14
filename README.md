@@ -11,10 +11,10 @@ This is a flask webapp that retrieves data from a news api and enables a user to
 Setup/Installation Requirements
 -------
 Internet
-A connected device
-A browser
-Python
-Flask
+* A connected device
+* A browser
+* Python
+* Flask
 user specification
 -------
 User is able to view latest news highlights
