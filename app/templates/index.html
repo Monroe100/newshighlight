@@ -10,57 +10,60 @@
 
     {% block content %}
     <div class="jumbotron-fluid">
-     <div class="in" style="background-color: #57c0f5;font-size: 20px; text-align:right;">
+     <div class="in" style="background-color: #57c0f5;font-size: 20px; text-align:left;">
   <p>GENERAL SOURCES</p>
     <ul class=tabs>
-            <li><a data-toggle="tab" href="#general">GENERAL</a></li>
-            <li><a data-toggle="tab" href="#sports">SPORTS</a></li>
             <li><a data-toggle="tab" href="#technology">TECHNOLOGY</a></li>
             <li><a data-toggle="tab" href="#entertainment">ENTERTAINMENT</a></li>
-            <li><a data-toggle="tab" href="#health">HEALTH</a></li>
-            <li><a data-toggle="tab" href="#science">SCIENCE</a></li>
             <li><a data-toggle="tab" href="#political">POLITICAL</a></li>
             <li><a data-toggle="tab" href="#business">BUSINESS</a></li>
+            <li><a data-toggle="tab" href="#health">HEALTH</a></li>
+            <li><a data-toggle="tab" href="#science">SCIENCE</a></li>
+            <li><a data-toggle="tab" href="#general">GENERAL</a></li>
+            <li><a data-toggle="tab" href="#sports">SPORTS</a></li>
+           
         </ul>
           <div class="tabs">
              <!-- <div class="inn" style="background-color:#grey ; font-size: 18px;text-align:center;"> -->
 
-            <div id="general" class="tab-pane fade">
+            <div id="General" class="tab-pane fade">
 
                 <!--general news section-->
                 {{macro.displayNewsList(general)}}
             </div>
             
-            <div id="business" class="tab-pane fade">
+            <div id="Business" class="tab-pane fade">
                 <!-- Business news sources -->
                 {{macro.displayNewsList(business)}}
             </div>
             
-            <div id="entertainment" class="tab-pane fade">
+            <div id="Entertainment" class="tab-pane fade">
                 <!-- Entertainment news sources -->
                 {{ macro.displayNewsList(entertainment) }}
             </div>
             
-            <div id="sports" class="tab-pane fade">
+            <div id="Sports" class="tab-pane fade">
                 <!-- Sports news sources-->
                 {{ macro.displayNewsList(sports) }}text-align:center;
             </div>
-            <div id="science" class="tab-pane fade">
+            <div id="Science" class="tab-pane fade">
                 <!--Science news sources-->
-                <div id="political" class="tab-pane fade">
+                {{macro.displayNewsList(science)}}
+            </div>
+            
+            <div id="Political" class="tab-pane fade">
                     <!-- political news sources -->
                     {{ macro.displayNewsList(political) }}
                 </div>
-                <div id="technology" class="tab-pane fade">
+                <div id="Technology" class="tab-pane fade">
                     <!-- Technology news sources -->
                     {{ macro.displayNewsList(technology) }}
                 </div>
-                <div id="health" class="tab-pane fade">
+                <div id="Health" class="tab-pane fade">
                     <!-- Health news sources -->
                     {{ macro.displayNewsList(health) }}
                 </div>
-                {{macro.displayNewsList(science)}}
-            </div>
+               
           </div>
         </style>
     </div>
