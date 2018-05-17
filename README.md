@@ -23,13 +23,13 @@ SetUp Procedure
 ----
 * Go to my Github repository and clone the repository to your local machine using this link:https://github.com/Monroe100/newshighlight.git
 * Navigate to the Document using the console.
-* create a virtual environment using the following instructions.
+create a virtual environment using the following instructions.
 ------
 * sudo apt install virtualenv
 * virtualenv virtual
 ------
 * To activate the virtual environment use the following command:" virtual source/bin/activate"
-* In the virtual environment run the following so as to activate the website.
+ In the virtual environment run the following so as to activate the website.
 -------
 * export NEWS_API_KEY="Api_key_Here"
 * Python3.6 manage.py server
