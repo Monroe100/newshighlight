@@ -28,12 +28,21 @@ SetUp Procedure
 * sudo apt install virtualenv
 * virtualenv virtual
 ------
+
+Activation of the Virtual environment
+---
 * To activate the virtual environment use the following command:" virtual source/bin/activate"
  * In the virtual environment run the following so as to activate the website.
 -------
-* export NEWS_API_KEY="Api_key_Here"
+* export NEWS_API_KEY="ApiKeyHere"
 * Python3.6 manage.py server
 -------
+* Open the link on the web browser, so as to access the user interface of the application
+
+Application Behaviour 
+---
+Once the user clicks on the News Source they want, they are directed to various articles in that News Source where they can get to choose the article of their choice.
+
 
 Technologies used
 ---
